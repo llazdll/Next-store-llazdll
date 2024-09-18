@@ -1,30 +1,31 @@
-'use client';
-import { adminLinks } from '@/utils/links';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Button } from '@/components/ui/button';
+'use client';  
+import { adminLinks } from '@/utils/links';  
+import Link from 'next/link';  
+import { usePathname } from 'next/navigation';  
+import { Button } from '@/components/ui/button';  
 
-function Sidebar() {
-  const pathname = usePathname();
+function Sidebar() {  
+  const pathname = usePathname();  
 
-  return (
-    <aside>
-      {adminLinks.map((link,index) => {
-        const isActivePage = pathname === link.href;
-        const variant = isActivePage ? 'default' : 'ghost';
-        return (
-          <Button
-            asChild
-            className='w-full mb-2 capitalize font-normal justify-start'
-            variant={variant}
-          >
-            <Link key={index} href={link.href}>
-              {link.label}
-            </Link>
-          </Button>
-        );
-      })}
-    </aside>
-  );
-}
+  return (  
+    <aside>  
+      {adminLinks.map((link, index) => {  
+        const isActivePage = pathname === link.href;  
+        const variant = isActivePage ? 'default' : 'ghost';  
+        return (  
+          <Button  
+            key={index} // Move the key prop here  
+            asChild  
+            className='w-full mb-2 capitalize font-normal justify-start'  
+            variant={variant}  
+          >  
+            <Link href={link.href}>  
+              {link.label}  
+            </Link>  
+          </Button>  
+        );  
+      })}  
+    </aside>  
+  );  
+}  
 export default Sidebar;
