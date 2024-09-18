@@ -9,7 +9,7 @@ function Sidebar() {
 
   return (
     <aside>
-      {adminLinks.map((link) => {
+      {adminLinks.map((link,index) => {
         const isActivePage = pathname === link.href;
         const variant = isActivePage ? 'default' : 'ghost';
         return (
@@ -18,7 +18,7 @@ function Sidebar() {
             className='w-full mb-2 capitalize font-normal justify-start'
             variant={variant}
           >
-            <Link key={link.href} href={link.href}>
+            <Link key={index} href={link.href}>
               {link.label}
             </Link>
           </Button>

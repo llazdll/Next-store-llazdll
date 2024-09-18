@@ -6,7 +6,7 @@ import TextAreaInput from '@/components/form/TextAreaInput';
 import { SubmitButton } from '@/components/form/Buttons';
 import CheckboxInput from '@/components/form/CheckBoxInput';
 import ImageInputContainer from '@/components/form/ImageInputContainer';
-import { text } from 'stream/consumers';
+
 async function EditProductPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const product = await fetchAdminProductDetails(id);
