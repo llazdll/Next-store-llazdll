@@ -77,3 +77,12 @@ export const CardSubmitButton = ({ isFavorite }: { isFavorite: boolean }) => {
   </Button>
 }
 
+export const ProductSignInButton = () => {
+  return (
+    <SignInButton mode='modal'>
+      <Button type='button' size='default' className='mt-8'>
+        Please Sign In
+      </Button>
+    </SignInButton>
+  );
+};

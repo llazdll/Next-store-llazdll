@@ -9,8 +9,8 @@ import Providers from "./providers";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next Store',
-  description: 'A nifty store built with Next.js',
+  title: 'llazdll Store',
+  description: 'A nifty store built with Next.js by llazdll',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
